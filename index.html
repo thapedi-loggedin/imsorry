@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8-bit Room Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="ui-panel">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">Hits:</span>
+                    <span id="hit-counter">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Time:</span>
+                    <span id="time-display">Afternoon</span>
+                </div>
+            </div>
+            <div class="weapon-selector">
+                <h3>Weapons</h3>
+                <div class="weapon-buttons">
+                    <button id="weapon-bat" class="weapon-btn active" data-weapon="bat">
+                        <span class="weapon-icon">🏏</span>
+                        <span class="weapon-name">Foam Bat</span>
+                    </button>
+                    <button id="weapon-pan" class="weapon-btn" data-weapon="pan">
+                        <span class="weapon-icon">🍳</span>
+                        <span class="weapon-name">Frying Pan</span>
+                    </button>
+                    <button id="weapon-hammer" class="weapon-btn" data-weapon="hammer">
+                        <span class="weapon-icon">🔨</span>
+                        <span class="weapon-name">Toy Hammer</span>
+                    </button>
+                    <button id="weapon-zapper" class="weapon-btn" data-weapon="zapper">
+                        <span class="weapon-icon">⚡</span>
+                        <span class="weapon-name">Zapper</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="game-canvas"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
