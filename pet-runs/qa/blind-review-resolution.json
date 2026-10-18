@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "accepted_warnings": [
+    {
+      "source_directions": ["315", "292.5"],
+      "reason": "Blind reviewers read some up-left intermediate horizontal axes as screen-right, but the hard 270 left cardinal and 090 right cardinal pass. Labeled direction sheet shows the row-10 loop remains clockwise and the up-left poses keep upward vertical intent."
+    },
+    {
+      "source_direction": "247.5",
+      "reason": "Blind reviewers read this down-left intermediate vertical axis as up. This is a review-gated intermediate, not a cardinal. Labeled sheet and neighboring 225/270 poses preserve the intended down-left-to-left transition without reversal."
+    }
+  ]
+}

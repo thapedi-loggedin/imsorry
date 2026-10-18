@@ -1,45 +1,49 @@
-# 8-bit Room Game
+# Treehouse Sanctuary
 
-A simple 8-bit style game built with Phaser.js featuring a single room environment, an auto-roaming character, weapon-based screen effects, dynamic lighting, and a special transformation system.
+A cozy isometric Phaser game prototype about living in a warm treehouse room, letting things get messy, and quietly restoring order over time.
 
-## Features
+## Current Direction
 
-- **Single Room Environment**: A room with two walls, computer desk, couch, TV with game console, and a window as the light source
-- **Auto-Roaming Character**: An 8-bit character that automatically roams around the room with idle animations
-- **Four Weapons**: 
-  - **Foam Bat**: Light screen bounce
-  - **Frying Pan**: Room bounces more
-  - **Toy Hammer**: Screen bounce + flash
-  - **Zapper**: Rapid bouncing + flashing
-- **Time-of-Day Lighting**: Room lighting changes based on time (bright afternoon, evening-toned at night)
-- **Gorilla Mode**: At 1000 hits, the character transforms into Super Saiyan-style gorilla mode for 2 minutes, going wild and messing up the room
-- **Room Repair**: After gorilla mode, the room gradually repairs itself with one object fixed every few seconds
+The room is now built as an **art-backed Phaser scene**:
 
-## How to Play
+- The approved isometric concept image is used as the room background.
+- Phaser handles invisible interaction zones, character movement, mess states, repair queue, and UI overlays.
+- This keeps the visual bar close to the concept while the gameplay systems stay flexible.
 
-1. Open `index.html` in a web browser
-2. Click on the game canvas to attack with your selected weapon
-3. Select different weapons using the UI buttons on the left
-4. Watch the character roam around the room
-5. Build up hits to trigger gorilla mode at 1000 hits
-6. Observe the time-of-day lighting changes
+## Tech Stack
+
+- Vite
+- Phaser 3
+- Plain JavaScript modules
+
+## Project Structure
+
+- `index.html` - Vite HTML entry
+- `src/main.js` - Phaser bootstrapping
+- `src/scenes/SanctuaryScene.js` - main game scene
+- `src/scenes/sanctuaryObjects.js` - interaction zone data
+- `src/styles.css` - page shell styling
+- `public/assets/backgrounds/treehouse-sanctuary-concept.png` - current room background
+
+## Scripts
+
+```bash
+npm install
+npm run dev
+npm run build
+```
 
 ## Controls
 
-- **Mouse Click**: Attack with selected weapon
-- **Weapon Buttons**: Select different weapons (Foam Bat, Frying Pan, Toy Hammer, Zapper)
+- Click a room object to make it messy, then broken.
+- Click the floor to move the character.
+- Wait and the character automatically restores queued objects.
 
-## Technical Details
+## Manual Validation
 
-- **Engine**: Phaser.js 3.80.1
-- **Resolution**: 1024x768
-- **Style**: 8-bit pixel art
-- **Browser**: Modern browsers with JavaScript enabled
-
-## Setup
-
-No installation required! Just open `index.html` in your web browser. The game uses Phaser.js via CDN.
-
-## License
-
-This project is open source and available for personal use.
+1. Run `npm run dev`.
+2. Open the local Vite URL.
+3. Confirm the concept-art room appears, not programmer-art furniture.
+4. Click fireplace, shelves, couch, desk, record player, and stairwell zones.
+5. Confirm labels/markers appear and the HUD updates.
+6. Wait for the character to walk to queued objects and repair them.

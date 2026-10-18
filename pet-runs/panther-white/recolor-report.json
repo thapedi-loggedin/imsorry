@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "input": "C:\\Users\\blackthundercat\\.codex\\pets\\blackthundercat\\spritesheet.webp",
+  "output_png": "C:\\dev\\Experiments\\imsorry\\pet-runs\\panther-white\\spritesheet.png",
+  "output_webp": "C:\\dev\\Experiments\\imsorry\\pet-runs\\panther-white\\spritesheet.webp",
+  "changed_pixels": 762391,
+  "accent_pixels_recolored": 206355,
+  "size": [
+    1536,
+    2288
+  ]
+}
